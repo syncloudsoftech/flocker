@@ -5,6 +5,8 @@ FROM ${baseImage}
 ARG flutterSdkDir=/opt/flutter
 ARG flutterSdkVersion=3.3.10
 
+ARG workingDir=/workspace
+
 ENV FLUTTER_SDK_HOME=$flutterSdkDir
 
 # download and install flutter
@@ -19,3 +21,7 @@ RUN flutter doctor --android-licenses
 
 # Cache common deps
 RUN flutter precache
+
+# Set up workspace
+RUN mkdir -p ${workingDir}
+WORKDIR ${workingDir}
