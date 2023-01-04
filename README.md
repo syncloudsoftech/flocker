@@ -14,7 +14,7 @@ If already, run the below command in your [Flutter](https://flutter.dev) project
 $ docker run -it --rm -v $PWD:/workspace syncloudsoftech/flocker flutter build web
 ```
 
-You can pass build either for `web` or `apk` / `appbundle` easily and pass any options e.g., `--debug` as below:
+You can build either for `web` or `apk` / `appbundle` easily and pass any options e.g., `--debug` as below:
 
 ```shell
 $ docker run -it --rm -v $PWD:/workspace syncloudsoftech/flocker flutter build apk --debug
